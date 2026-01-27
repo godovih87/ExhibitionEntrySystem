@@ -1,0 +1,142 @@
+﻿@model ExhibitionEntrySystem.Models.Pass
+
+<style>
+    .custom-modal {
+        background-color: #1f2a36;
+        color: #ffffff;
+        border-radius: 10px;
+    }
+
+        .custom-modal .modal-header,
+        .custom-modal .modal-footer {
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .custom-modal .form-label {
+            color: #e4e9ee;
+            font-weight: 500;
+        }
+
+        .custom-modal .form-control,
+        .custom-modal .form-select {
+            background-color: #2b3644;
+            color: #ffffff;
+            border: 1px solid #3b4757;
+        }
+
+            .custom-modal .form-control::placeholder {
+                color: #aab4bf;
+            }
+
+            .custom-modal .form-control:focus,
+            .custom-modal .form-select:focus {
+                background-color: #2b3644;
+                color: #ffffff;
+                border-color: #4c8dff;
+                box-shadow: 0 0 0 0.15rem rgba(76, 141, 255, 0.25);
+            }
+
+        .custom-modal .btn-secondary {
+            background-color: #3a4656;
+            border-color: #3a4656;
+        }
+
+            .custom-modal .btn-secondary:hover {
+                background-color: #4a5666;
+            }
+
+        .custom-modal .btn-primary {
+            background-color: #4c8dff;
+            border-color: #4c8dff;
+        }
+
+            .custom-modal .btn-primary:hover {
+                background-color: #3b78e0;
+            }
+
+        .custom-modal .text-danger {
+            color: #ff6b6b !important;
+        }
+</style>
+
+<div class="modal fade" id="editPassModal-@Model.Id" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content custom-modal">
+            <form asp-action="EditPass" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="Id" value="@Model.Id" />
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Редактирование пропуска №@Model.Id</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <!-- Организация -->
+                    <div class="mb-3">
+                        <label class="form-label">Организация *</label>
+                        <input name="Visitor.OrganizationName" value="@Model.Visitor.OrganizationName" class="form-control" />
+                    </div>
+
+                    <!-- Контактное лицо -->
+                    <div class="mb-3">
+                        <label class="form-label">Контактное лицо *</label>
+                        <input name="Visitor.ContactPerson" value="@Model.Visitor.ContactPerson" class="form-control" />
+                    </div>
+
+                    <!-- Телефон -->
+                    <div class="mb-3">
+                        <label class="form-label">Телефон *</label>
+                        <input name="Visitor.PhoneNumber" value="@Model.Visitor.PhoneNumber" class="form-control" />
+                    </div>
+
+                    <!-- Тип транспорта -->
+                    <div class="mb-3">
+                        <label class="form-label">Тип транспорта *</label>
+                        <select name="Vehicle.VehicleType" class="form-select">
+                            <option value="">Выберите</option>
+                            <option value="Легковой" selected="@(Model.Vehicle.VehicleType == "Легковой")">Легковой</option>
+                            <option value="Грузовой(5Т)" selected="@(Model.Vehicle.VehicleType == "Грузовой(5Т)")">Грузовой (5Т)</option>
+                            <option value="Фура(10Т+)" selected="@(Model.Vehicle.VehicleType == "Фура(10Т+)")">Фура (10Т+)</option>
+                        </select>
+                    </div>
+
+                    <!-- Гос. номер -->
+                    <div class="mb-3">
+                        <label class="form-label">Гос. номер *</label>
+                        <input name="Vehicle.LicensePlate" value="@Model.Vehicle.LicensePlate" class="form-control" placeholder="а111аа96" />
+                    </div>
+
+                    <!-- Время въезда -->
+                    <div class="mb-3">
+                        <label class="form-label">Время въезда *</label>
+                        <input type="datetime-local" name="StartTime" value="@Model.StartTime.ToString("yyyy-MM-ddTHH:mm")" class="form-control" />
+                    </div>
+
+                    <!-- Время выезда -->
+                    <div class="mb-3">
+                        <label class="form-label">Время выезда *</label>
+                        <input type="datetime-local" name="EndTime" value="@Model.EndTime.ToString("yyyy-MM-ddTHH:mm")" class="form-control" />
+                    </div>
+
+                    <!-- Статус -->
+                    <div class="mb-3">
+                        <label class="form-label">Статус *</label>
+                        <select name="Status" class="form-select">
+                            <option value="Сформирован" selected="@(Model.Status == "Сформирован")">Сформирован</option>
+                            <option value="Въехал" selected="@(Model.Status == "Въехал")">Въехал</option>
+                            <option value="Выехал" selected="@(Model.Status == "Выехал")">Выехал</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

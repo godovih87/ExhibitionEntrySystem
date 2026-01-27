@@ -1,0 +1,23 @@
+﻿@model ExhibitionEntrySystem.Models.Booking
+
+<div class="card mx-auto mt-5" style="max-width: 500px;">
+    <div class="card-header bg-success text-white text-center">
+        <h4>Пропуск успешно создан</h4>
+    </div>
+
+    <div class="card-body text-center">
+        <p><strong>ID пропуска:</strong> @ViewBag.PassId</p>
+
+        <img src="@ViewBag.QRCode" alt="QR Code" class="img-fluid mb-3" />
+
+        <div class="d-grid gap-2">
+            <a href="@ViewBag.QRCode" target="_blank" class="btn btn-primary">
+                Открыть QR в новом окне
+            </a>
+
+            <a href="/" class="btn btn-outline-secondary">
+                На главную
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+﻿@model ExhibitionEntrySystem.Models.Pass
+
+<h2>Проверка пропуска</h2>
+
+<p><b>ФИО:</b> @Model.Visitor.ContactPerson</p>
+<p><b>Авто:</b> @Model.Vehicle.LicensePlate</p>
+<p><b>Павильон:</b> @Model.Pavilion.Name</p>
+<p><b>Статус:</b> @Model.Status</p>
+
+@if (Model.Status == "Сформирован")
+{
+    <form method="post" asp-action="Entry">
+        <input type="hidden" name="passId" value="@Model.Id" />
+        <button class="btn btn-success">ВЪЕЗД</button>
+    </form>
+}
+
+@if (Model.Status == "Въехал")
+{
+    <form method="post" asp-action="Exit">
+        <input type="hidden" name="passId" value="@Model.Id" />
+        <button class="btn btn-danger">ВЫЕЗД</button>
+    </form>
+}

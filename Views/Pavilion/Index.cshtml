@@ -1,0 +1,24 @@
+﻿@model List<ExhibitionEntrySystem.Models.Pavilion>
+
+@{
+    ViewData["Title"] = "Выбор павильона";
+}
+
+<h2 class="text-center mb-4">Выбор павильона</h2>
+
+<div class="row">
+    @foreach (var pavilion in Model)
+    {
+        <div class="col-md-3 mb-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h4>@pavilion.Name</h4>
+                    <a class="btn btn-primary mt-3"
+                       href="@Url.Action("TimeSlots", "Pavilion", new { pavilionId = pavilion.Id })">
+                        Выбрать
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

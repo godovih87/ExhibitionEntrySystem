@@ -1,0 +1,60 @@
+﻿@model List<ExhibitionEntrySystem.Models.Pass>
+
+<h2>Пропуски</h2>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Организация</th>
+            <th>Контактное лицо</th>
+            <th>Телефон</th>
+            <th>Павильон</th>
+            <th>Тип ТС</th>
+            <th>Гос. номер</th>
+            <th>Статус</th>
+            <th>Въезд</th>
+            <th>Выезд</th>
+            <th>Действия</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pass in Model)
+        {
+            <tr>
+                <td>@pass.Id</td>
+                <td>@pass.Visitor.OrganizationName</td>
+                <td>@pass.Visitor.ContactPerson</td>
+                <td>@pass.Visitor.PhoneNumber</td>   
+                <td>@pass.Pavilion.Name</td>
+                <td>@pass.Vehicle.VehicleType</td>
+                <td>@pass.Vehicle.LicensePlate</td>
+                <td>@pass.Status</td>
+                <td>@pass.StartTime.ToString("dd.MM.yyyy HH:mm")</td>
+                <td>@pass.EndTime.ToString("dd.MM.yyyy HH:mm")</td>
+                <td>
+                    <button class="btn btn-sm btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editPassModal-@pass.Id">
+                        Редактировать
+                    </button>
+                    <form asp-action="DeletePass"
+                          asp-route-id="@pass.Id"
+                          method="post"
+                          class="d-inline">
+                        @Html.AntiForgeryToken()
+                        <button class="btn btn-sm btn-danger"
+                                onclick="return confirm('Удалить пропуск?');">
+                            Удалить
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@foreach (var pass in Model)
+{
+    @await Html.PartialAsync("_EditPassModal", pass)
+}

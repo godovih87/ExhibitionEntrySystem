@@ -1,0 +1,36 @@
+﻿<div id="floatingButtons" style="
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+">
+    <button class="btn btn-primary btn-sm" id="btnRU">RU</button>
+    <button class="btn btn-primary btn-sm" id="btnEN">EN</button>
+    <button class="btn btn-secondary btn-sm" id="btnTheme">Тема</button>
+</div>
+
+<script>
+    // Смена темы
+    const themeButton = document.getElementById('btnTheme');
+    themeButton.onclick = () => {
+        const body = document.body;
+        const newTheme = body.classList.contains('light-theme') ? 'dark-theme' : 'light-theme';
+        body.classList.remove('light-theme', 'dark-theme');
+        body.classList.add(newTheme);
+        document.cookie = "theme=" + newTheme + ";path=/;max-age=31536000";
+    };
+
+    // Применяем тему из cookie при загрузке
+    const savedTheme = (() => {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; theme=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    })();
+    if(savedTheme) {
+        document.body.classList.remove('light-theme', 'dark-theme');
+        document.body.classList.add(savedTheme);
+    }
+</script>

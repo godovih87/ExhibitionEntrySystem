@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Доступ КПП";
+}
+
+<h3>Введите пароль КПП</h3>
+
+@if (ViewBag.Error != null)
+{
+    <div class="text-danger">@ViewBag.Error</div>
+}
+
+<form method="post" asp-action="Auth">
+    <input type="hidden" name="key" value="@ViewBag.Key" />
+    <div class="mb-3">
+        <input type="password" name="password" class="form-control" placeholder="Пароль" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Войти</button>
+</form>

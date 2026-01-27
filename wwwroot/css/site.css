@@ -1,0 +1,76 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+    body.light-theme {
+        background-color: #f8f9fa;
+        color: #212529;
+    }
+
+    body.dark-theme {
+        background-color: #121212;
+        color: #f8f9fa;
+    }
+
+.card {
+    background-color: inherit;
+    color: inherit;
+}
+
+.navbar {
+    background-color: inherit !important;
+}
+
+body.light-theme {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+body.dark-theme {
+    background-color: #212529;
+    color: #f8f9fa;
+}
+
+body.light-theme .navbar {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+}
+
+body.dark-theme .navbar {
+    background-color: #343a40 !important;
+    color: #f8f9fa !important;
+}
+
+/* текст кнопок */
+body.light-theme .btn {
+    color: #212529;
+}
+
+body.dark-theme .btn {
+    color: #f8f9fa;
+}
+
+.modal-theme-fix {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+}
+

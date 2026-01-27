@@ -1,0 +1,613 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\views\\shared\\_buttonspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:views\\shared\\_buttonspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\views\\pavilion\\timeslots.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:views\\pavilion\\timeslots.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\views\\pavilion\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:views\\pavilion\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\views\\checkpoint\\verify.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:views\\checkpoint\\verify.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\views\\checkpoint\\result.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:views\\checkpoint\\result.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\views\\checkpoint\\auth.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:views\\checkpoint\\auth.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\views\\booking\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:views\\booking\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\views\\booking\\bookform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:views\\booking\\bookform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\views\\admin\\_editpassmodal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:views\\admin\\_editpassmodal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\models\\visitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:models\\visitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\models\\securitylogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:models\\securitylogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\models\\pavilion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:models\\pavilion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\models\\passevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:models\\passevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\models\\pass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:models\\pass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\models\\adminreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:models\\adminreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\controllers\\pavilioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:controllers\\pavilioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\controllers\\passwordhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:controllers\\passwordhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\controllers\\checkpointcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:controllers\\checkpointcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|c:\\users\\egor\\documents\\exhibitionentrysystem\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{7A35F763-4B8A-4F7B-87E6-55616A445D87}|ExhibitionEntrySystem.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\FostersPC\\Desktop\\ExhibitionEntrySystem\\Migrations\\20260118192647_AddSecretKeyToPass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "CheckpointController.cs",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Controllers\\CheckpointController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CheckpointController.cs",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Controllers\\CheckpointController.cs",
+              "RelativeToolTip": "Controllers\\CheckpointController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T11:11:47.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "PasswordHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Controllers\\PasswordHelper.cs",
+              "RelativeDocumentMoniker": "Controllers\\PasswordHelper.cs",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Controllers\\PasswordHelper.cs",
+              "RelativeToolTip": "Controllers\\PasswordHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T04:32:51.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Models\\Booking.cs",
+              "RelativeDocumentMoniker": "Models\\Booking.cs",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Models\\Booking.cs",
+              "RelativeToolTip": "Models\\Booking.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T10:51:54.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T05:19:59.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Vehicle.cs",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Models\\Vehicle.cs",
+              "RelativeDocumentMoniker": "Models\\Vehicle.cs",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Models\\Vehicle.cs",
+              "RelativeToolTip": "Models\\Vehicle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T10:43:27.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T11:48:18.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "_EditPassModal.cshtml",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Admin\\_EditPassModal.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\_EditPassModal.cshtml",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Admin\\_EditPassModal.cshtml",
+              "RelativeToolTip": "Views\\Admin\\_EditPassModal.cshtml",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAAIAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-23T19:53:14.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Dashboard.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAAoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-20T05:45:31.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAgwBwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T04:25:50.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Pass.cs",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Models\\Pass.cs",
+              "RelativeDocumentMoniker": "Models\\Pass.cs",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Models\\Pass.cs",
+              "RelativeToolTip": "Models\\Pass.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T10:43:57.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BookingController.cs",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "Controllers\\BookingController.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAgwCoAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T10:45:30.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-23T20:06:31.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Visitor.cs",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Models\\Visitor.cs",
+              "RelativeDocumentMoniker": "Models\\Visitor.cs",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Models\\Visitor.cs",
+              "RelativeToolTip": "Models\\Visitor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T10:43:08.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "SecurityLogin.cs",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Models\\SecurityLogin.cs",
+              "RelativeDocumentMoniker": "Models\\SecurityLogin.cs",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Models\\SecurityLogin.cs",
+              "RelativeToolTip": "Models\\SecurityLogin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T04:37:16.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Pavilion.cs",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Models\\Pavilion.cs",
+              "RelativeDocumentMoniker": "Models\\Pavilion.cs",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Models\\Pavilion.cs",
+              "RelativeToolTip": "Models\\Pavilion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T10:43:44.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "PavilionController.cs",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Controllers\\PavilionController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PavilionController.cs",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Controllers\\PavilionController.cs",
+              "RelativeToolTip": "Controllers\\PavilionController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T10:45:15.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "PassEvent.cs",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Models\\PassEvent.cs",
+              "RelativeDocumentMoniker": "Models\\PassEvent.cs",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Models\\PassEvent.cs",
+              "RelativeToolTip": "Models\\PassEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T10:44:11.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T10:54:04.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "AdminReport.cs",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Models\\AdminReport.cs",
+              "RelativeDocumentMoniker": "Models\\AdminReport.cs",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Models\\AdminReport.cs",
+              "RelativeToolTip": "Models\\AdminReport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T05:50:51.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Admin\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Admin\\Login.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-20T05:45:17.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BookForm.cshtml",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Booking\\BookForm.cshtml",
+              "RelativeDocumentMoniker": "Views\\Booking\\BookForm.cshtml",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Booking\\BookForm.cshtml",
+              "RelativeToolTip": "Views\\Booking\\BookForm.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-08T09:42:36.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_ButtonsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Shared\\_ButtonsPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_ButtonsPartial.cshtml",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Shared\\_ButtonsPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_ButtonsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-20T06:01:06.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TimeSlots.cshtml",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Pavilion\\TimeSlots.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pavilion\\TimeSlots.cshtml",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Pavilion\\TimeSlots.cshtml",
+              "RelativeToolTip": "Views\\Pavilion\\TimeSlots.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-15T10:48:31.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Pavilion\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pavilion\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Pavilion\\Index.cshtml",
+              "RelativeToolTip": "Views\\Pavilion\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-15T10:48:20.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Verify.cshtml",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Checkpoint\\Verify.cshtml",
+              "RelativeDocumentMoniker": "Views\\Checkpoint\\Verify.cshtml",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Checkpoint\\Verify.cshtml",
+              "RelativeToolTip": "Views\\Checkpoint\\Verify.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-19T12:20:53.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Result.cshtml",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Checkpoint\\Result.cshtml",
+              "RelativeDocumentMoniker": "Views\\Checkpoint\\Result.cshtml",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Checkpoint\\Result.cshtml",
+              "RelativeToolTip": "Views\\Checkpoint\\Result.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-19T11:51:45.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Auth.cshtml",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Checkpoint\\Auth.cshtml",
+              "RelativeDocumentMoniker": "Views\\Checkpoint\\Auth.cshtml",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Checkpoint\\Auth.cshtml",
+              "RelativeToolTip": "Views\\Checkpoint\\Auth.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-19T11:43:16.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Success.cshtml",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Booking\\Success.cshtml",
+              "RelativeDocumentMoniker": "Views\\Booking\\Success.cshtml",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Booking\\Success.cshtml",
+              "RelativeToolTip": "Views\\Booking\\Success.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-15T11:05:24.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAAAHMAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-08T09:43:02.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-08T09:43:14.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-15T10:54:18.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-08T09:43:07.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-08T09:43:08.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\Egor\\Documents\\ExhibitionEntrySystem\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-19T11:57:25.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "20260118192647_AddSecretKeyToPass.cs",
+              "DocumentMoniker": "C:\\Users\\FostersPC\\Desktop\\ExhibitionEntrySystem\\Migrations\\20260118192647_AddSecretKeyToPass.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\FostersPC\\Desktop\\ExhibitionEntrySystem\\Migrations\\20260118192647_AddSecretKeyToPass.cs",
+              "ToolTip": "C:\\Users\\FostersPC\\Desktop\\ExhibitionEntrySystem\\Migrations\\20260118192647_AddSecretKeyToPass.cs",
+              "RelativeToolTip": "..\\..\\..\\FostersPC\\Desktop\\ExhibitionEntrySystem\\Migrations\\20260118192647_AddSecretKeyToPass.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T19:26:47.553Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

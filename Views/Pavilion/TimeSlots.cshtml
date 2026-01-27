@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Выбор времени";
+    var pavilionBase = ViewBag.PavilionName;
+    var pavilionNum = ViewBag.PavilionNumber;
+}
+
+<h2 class="text-center mb-4">@ViewBag.PavilionName</h2>
+
+<div class="row">
+    @foreach (var hour in ViewBag.Hours)
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5>@hour.Hour:00 – @(hour.Hour + 1):00</h5>
+                    <p>Свободно мест: <span>@hour.Available</span></p>
+
+                    @if(hour.Available > 0)
+                    {
+                        <a class="btn btn-success" 
+                           href="@Url.Action("BookForm", "Booking",
+                                new { pavilionId = ViewBag.PavilionId,
+                                      startTime = DateTime.Today.AddHours(hour.Hour).ToString("yyyy-MM-ddTHH:mm") })">
+                            Выбрать
+                        </a>
+                    }
+                    else
+                    {
+                        <button class="btn btn-danger" disabled>Занято</button>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>
