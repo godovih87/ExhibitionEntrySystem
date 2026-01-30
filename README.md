@@ -1,5 +1,5 @@
 ## 💬 ExhibitionEntrySystem — система регистрации пропусков  
-ASP.NET Core MVC MSSQL QR-code  
+
 ![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?style=for-the-badge&logo=dotnet)
 ![ASP.NET Core](https://img.shields.io/badge/ASP.NET-Core-512BD4?style=for-the-badge&logo=dotnet)
 ![MVC](https://img.shields.io/badge/Architecture-MVC-0A66C2?style=for-the-badge)
@@ -39,8 +39,7 @@ ASP.NET Core MVC MSSQL QR-code
 - ASP.NET Core MVC (.NET 8.0)  
 - MS SQL Server  
 - Entity Framework Core (Code First)  
-- QR-code API  
-- JSON  
+- QR-code API    
 
 ### Frontend   
 - HTML / CSS / JavaScript  
