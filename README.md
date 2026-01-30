@@ -1,4 +1,4 @@
-## 💬 ExhibitionEntrySystem — система регистрации пропусков  
+## 🚗 ExhibitionEntrySystem — система регистрации пропусков  
 
 ![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?style=for-the-badge&logo=dotnet)
 ![ASP.NET Core](https://img.shields.io/badge/ASP.NET-Core-512BD4?style=for-the-badge&logo=dotnet)
