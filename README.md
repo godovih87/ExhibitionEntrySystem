@@ -29,14 +29,16 @@ ExhibitionEntrySystem — веб-приложение для автоматиз�
 Регистрация выезда по QR-коду  
 Автоматическая фиксация времени  
 
-🛠 Технологический стек  
+## 🛠 Технологический стек  
 
-Backend  
-ASP.NET Core MVC (.NET 8.0)  
-MS SQL Server  
-Entity Framework Core (Code First)  
-QR-code API  
-JSON  
+### Backend  
+- ASP.NET Core MVC (.NET 8.0)  
+- MS SQL Server  
+- Entity Framework Core (Code First)  
+- QR-code API  
+- JSON  
 
-Frontend   
-HTML / CSS / JavaScript  
+- Frontend   
+- HTML / CSS / JavaScript  
+
+---
