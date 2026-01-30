@@ -1,7 +1,14 @@
 💬 ExhibitionEntrySystem — система регистрации пропусков  
 ASP.NET Core MVC MSSQL QR-code  
-![Net](https://img.shields.io/badge/.NET-8.0-512BD4?style=for-the-badge&logo=dotnet)
+![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?style=for-the-badge&logo=dotnet)
+![ASP.NET Core](https://img.shields.io/badge/ASP.NET-Core-512BD4?style=for-the-badge&logo=dotnet)
+![MVC](https://img.shields.io/badge/Architecture-MVC-0A66C2?style=for-the-badge)
 ![MSSQL](https://img.shields.io/badge/MS_SQL-Server-CC2927?style=for-the-badge&logo=microsoft-sql-server)
+![HTML](https://img.shields.io/badge/HTML-5-E34F26?style=for-the-badge&logo=html5)
+![CSS](https://img.shields.io/badge/CSS-3-1572B6?style=for-the-badge&logo=css3)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript)
+![Entity Framework](https://img.shields.io/badge/Entity_Framework-Core-512BD4?style=for-the-badge)
+
 ExhibitionEntrySystem — веб-приложение для автоматизации пропускного режима на территории предприятия.  
 Работает через браузер и не требует установки дополнительного программного обеспечения.
 
