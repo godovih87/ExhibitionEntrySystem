@@ -45,3 +45,37 @@
 - HTML / CSS / JavaScript  
 
 ---
+
+## 📥 Установка и запуск
+
+### ▶ Локальный запуск (Visual Studio)
+
+#### 1. Настройка базы данных
+
+Файл `ExhibitionEntrySystem/appsettings.json`:
+
+```json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Database=ExhibitionEntrySystemDB;Trusted_Connection=True;TrustServerCertificate=True"
+  }
+}
+```
+
+Применение миграций:
+
+```powershell
+Update-Database
+```
+
+---
+
+#### 2. Запуск сервера
+
+- Установить проект `ExhibitionEntrySystem` стартовым
+- Запустить (`F5`)
+- Откроется по адресу:
+
+```
+https://localhost:7295/
+```
