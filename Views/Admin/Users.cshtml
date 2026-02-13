@@ -1,0 +1,123 @@
+﻿@model List<ExhibitionEntrySystem.Models.User>
+
+@{
+    ViewData["Title"] = "Управление пользователями";
+}
+
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2><i class="bi bi-people"></i> Управление пользователями</h2>
+        <a asp-action="Dashboard" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left"></i> Назад к пропускам
+        </a>
+    </div>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show">
+            @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show">
+            @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <div class="card shadow">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Email</th>
+                            <th>ФИО</th>
+                            <th>Телефон</th>
+                            <th>Роль</th>
+                            <th>Дата регистрации</th>
+                            <th>Последний вход</th>
+                            <th>Действия</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var user in Model)
+                        {
+                            <tr>
+                                <td>@user.Id</td>
+                                <td>@user.Email</td>
+                                <td>@user.FullName</td>
+                                <td>@user.PhoneNumber</td>
+                                <td>
+                                    <span class="badge bg-@(user.Role switch {
+                                        "Admin" => "danger",
+                                        "KPP" => "warning",
+                                        _ => "success"
+                                    })">
+                                        @(user.Role switch {
+                                            "Admin" => "Администратор",
+                                            "KPP" => "КПП",
+                                            _ => "Пользователь"
+                                        })
+                                    </span>
+                                </td>
+                                <td>@user.CreatedAt.ToString("dd.MM.yyyy")</td>
+                                <td>@(user.LastLoginAt?.ToString("dd.MM.yyyy HH:mm") ?? "-")</td>
+                                <td>
+                                    @if (user.Email != "admin@expo.ru" || user.Id == 1)
+                                    {
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                                Изменить роль
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <form asp-action="ChangeUserRole" method="post" style="display: inline;">
+                                                        @Html.AntiForgeryToken()
+                                                        <input type="hidden" name="userId" value="@user.Id" />
+                                                        <input type="hidden" name="newRole" value="Admin" />
+                                                        <button type="submit" class="dropdown-item @(user.Role == "Admin" ? "active" : "")">
+                                                            Администратор
+                                                        </button>
+                                                    </form>
+                                                </li>
+                                                <li>
+                                                    <form asp-action="ChangeUserRole" method="post" style="display: inline;">
+                                                        @Html.AntiForgeryToken()
+                                                        <input type="hidden" name="userId" value="@user.Id" />
+                                                        <input type="hidden" name="newRole" value="KPP" />
+                                                        <button type="submit" class="dropdown-item @(user.Role == "KPP" ? "active" : "")">
+                                                            Сотрудник КПП
+                                                        </button>
+                                                    </form>
+                                                </li>
+                                                <li>
+                                                    <form asp-action="ChangeUserRole" method="post" style="display: inline;">
+                                                        @Html.AntiForgeryToken()
+                                                        <input type="hidden" name="userId" value="@user.Id" />
+                                                        <input type="hidden" name="newRole" value="User" />
+                                                        <button type="submit" class="dropdown-item @(user.Role == "User" ? "active" : "")">
+                                                            Пользователь
+                                                        </button>
+                                                    </form>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted">Главный администратор</span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

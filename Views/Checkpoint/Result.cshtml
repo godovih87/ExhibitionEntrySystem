@@ -1,0 +1,68 @@
+﻿@model ExhibitionEntrySystem.Models.Pass
+
+<h2>Проверка пропуска</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div class="text-danger font-weight-bold">@TempData["Error"]</div>
+}
+@if (TempData["Success"] != null)
+{
+    <div class="text-success font-weight-bold">@TempData["Success"]</div>
+}
+
+<hr />
+
+<p><b>Организация:</b> @Model.Visitor.OrganizationName</p>
+<p><b>Контакт:</b> @Model.Visitor.ContactPerson</p>
+<p><b>Телефон:</b> @Model.Visitor.PhoneNumber</p>
+<p><b>Авто:</b> @Model.Vehicle.LicensePlate</p>
+<p><b>Павильон:</b> @Model.Pavilion.Name</p>
+<p><b>Статус:</b> @Model.Status</p>
+<p><b>Окно:</b> @Model.StartTime.ToString("dd.MM.yyyy HH:mm") – @Model.EndTime.ToString("HH:mm")</p>
+
+<hr />
+
+@if (Model.Status == "Сформирован")
+{
+    <form method="post" asp-action="Entry" style="display: inline;">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="passId" value="@Model.Id" />
+        <button class="btn btn-success">ВЪЕЗД</button>
+    </form>
+}
+
+@if (Model.Status == "Въехал")
+{
+    <form method="post" asp-action="Exit" style="display: inline;">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="passId" value="@Model.Id" />
+        <button class="btn btn-danger">ВЫЕЗД</button>
+    </form>
+}
+
+<form method="post" asp-action="Logout" style="display: inline; margin-left: 10px;">
+    @Html.AntiForgeryToken()
+    <button class="btn btn-secondary">Выход с КПП</button>
+</form>
+
+<hr />
+
+<h3>📜 История событий</h3>
+
+@if (Model.PassEvents.Any())
+{
+    <ul>
+        @foreach (var e in Model.PassEvents.OrderByDescending(e => e.EventTime))
+        {
+            <li>
+                @(e.EventType == "Entry" ? "Въезд" : "Выезд")
+                — @e.EventTime.ToString("dd.MM.yyyy HH:mm")
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>Событий нет</p>
+}

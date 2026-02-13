@@ -1,0 +1,114 @@
+﻿@model ExhibitionEntrySystem.Models.Pass
+
+@{
+    ViewData["Title"] = $"Пропуск #{Model.Id}";
+}
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                    <h4 class="mb-0">
+                        <i class="bi bi-ticket-perforated"></i> Пропуск #@Model.Id
+                    </h4>
+                    <span class="badge bg-light text-dark">@Model.Status</span>
+                </div>
+
+                <div class="card-body">
+                    <div class="text-center mb-4">
+                        @{
+                            var scanUrl = Url.Action("Auth", "Checkpoint", new { key = Model.SecretKey }, Context.Request.Scheme);
+                            var qrUrl = $"https://api.qrserver.com/v1/create-qr-code/?size=250x250&data={Uri.EscapeDataString(scanUrl)}";
+                        }
+                        <img src="@qrUrl" alt="QR Code" class="img-fluid" style="max-width: 200px;" />
+                        <p class="mt-2 text-muted small">Отсканируйте QR-код на КПП</p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="border-bottom pb-2">Информация об организации</h5>
+                            <table class="table table-sm">
+                                <tr>
+                                    <th>Организация:</th>
+                                    <td>@Model.Visitor.OrganizationName</td>
+                                </tr>
+                                <tr>
+                                    <th>Контактное лицо:</th>
+                                    <td>@Model.Visitor.ContactPerson</td>
+                                </tr>
+                                <tr>
+                                    <th>Телефон:</th>
+                                    <td>@Model.Visitor.PhoneNumber</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h5 class="border-bottom pb-2">Транспортное средство</h5>
+                            <table class="table table-sm">
+                                <tr>
+                                    <th>Тип ТС:</th>
+                                    <td>@Model.Vehicle.VehicleType</td>
+                                </tr>
+                                <tr>
+                                    <th>Гос. номер:</th>
+                                    <td><strong>@Model.Vehicle.LicensePlate</strong></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <h5 class="border-bottom pb-2">Время действия</h5>
+                            <table class="table table-sm">
+                                <tr>
+                                    <th>Начало:</th>
+                                    <td>@Model.StartTime.ToString("dd.MM.yyyy HH:mm")</td>
+                                </tr>
+                                <tr>
+                                    <th>Окончание:</th>
+                                    <td>@Model.EndTime.ToString("dd.MM.yyyy HH:mm")</td>
+                                </tr>
+                                <tr>
+                                    <th>Павильон:</th>
+                                    <td>@Model.Pavilion?.Name</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h5 class="border-bottom pb-2">Фактические события</h5>
+                            @if (Model.PassEvents != null && Model.PassEvents.Any())
+                            {
+                                <ul class="list-group">
+                                    @foreach (var evt in Model.PassEvents.OrderByDescending(e => e.EventTime))
+                                    {
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            @(evt.EventType == "Entry" ? "Въезд" : "Выезд")
+                                            <span class="badge bg-secondary">@evt.EventTime.ToString("HH:mm dd.MM.yyyy")</span>
+                                        </li>
+                                    }
+                                </ul>
+                            }
+                            else
+                            {
+                                <p class="text-muted">Нет событий</p>
+                            }
+                        </div>
+                    </div>
+
+                    <div class="mt-4 d-flex justify-content-between">
+                        <a asp-action="Profile" class="btn btn-outline-secondary">
+                            <i class="bi bi-arrow-left"></i> Назад к профилю
+                        </a>
+                        <a href="@scanUrl" target="_blank" class="btn btn-primary">
+                            <i class="bi bi-box-arrow-up-right"></i> Открыть на КПП
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

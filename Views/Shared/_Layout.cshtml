@@ -1,0 +1,509 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        html {
+            font-size: 14px;
+        }
+
+        @@media (min-width: 768px) {
+            html {
+                font-size: 16px;
+            }
+        }
+
+        .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+            box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+        }
+
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+
+        body {
+            margin-bottom: 60px;
+        }
+
+        body.light-theme {
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+
+        body.dark-theme {
+            background-color: #121212;
+            color: #f8f9fa;
+        }
+
+        .card {
+            background-color: inherit;
+            color: inherit;
+        }
+
+        .navbar {
+            background-color: inherit !important;
+        }
+
+        body.light-theme {
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+
+        body.dark-theme {
+            background-color: #212529;
+            color: #f8f9fa;
+        }
+
+        body.light-theme .navbar {
+            background-color: #ffffff !important;
+            color: #212529 !important;
+        }
+
+        body.dark-theme .navbar {
+            background-color: #343a40 !important;
+            color: #f8f9fa !important;
+        }
+
+        body.light-theme .btn {
+            color: #212529;
+        }
+
+        body.dark-theme .btn {
+            color: #f8f9fa;
+        }
+
+        .modal-theme-fix {
+            background-color: var(--bs-body-bg);
+            color: var(--bs-body-color);
+        }
+
+        .back-button {
+            margin-bottom: 20px;
+        }
+        
+        a.navbar-brand {
+            text-decoration: none;
+        }
+
+        body.light-theme .card,
+        body.light-theme .modal-content,
+        body.light-theme .theme-aware-card,
+        body.light-theme .theme-aware-modal {
+        background-color: #ffffff;
+        color: #212529;
+        }
+
+        body.dark-theme .card,
+        body.dark-theme .modal-content,
+        body.dark-theme .theme-aware-card,
+        body.dark-theme .theme-aware-modal {
+        background-color: #2d2d2d;
+        color: #f8f9fa;
+        }
+
+        body.light-theme p,
+        body.light-theme h1,
+        body.light-theme h2,
+        body.light-theme h3,
+        body.light-theme h4,
+        body.light-theme h5,
+        body.light-theme h6,
+        body.light-theme span:not(.badge),
+        body.light-theme .theme-aware-text {
+        color: #212529;
+        }
+
+        body.dark-theme p,
+        body.dark-theme h1,
+        body.dark-theme h2,
+        body.dark-theme h3,
+        body.dark-theme h4,
+        body.dark-theme h5,
+        body.dark-theme h6,
+        body.dark-theme span:not(.badge),
+        body.dark-theme .theme-aware-text {
+        color: #f8f9fa;
+        }
+
+        body.light-theme .text-muted,
+        body.light-theme .theme-aware-muted {
+        color: #6c757d !important;
+        }
+
+        body.dark-theme .text-muted,
+        body.dark-theme .theme-aware-muted {
+        color: #adb5bd !important;
+        }
+
+
+        body.light-theme .modal-content,
+        body.light-theme .custom-modal,
+        body.light-theme .modal-body,
+        body.light-theme .modal-header,
+        body.light-theme .modal-footer {
+        background-color: #ffffff !important;
+        color: #212529 !important;
+        }
+
+        body.light-theme .modal-title,
+        body.light-theme .modal-body,
+        body.light-theme .modal-body label,
+        body.light-theme .modal-body p,
+        body.light-theme .modal-body h1,
+        body.light-theme .modal-body h2,
+        body.light-theme .modal-body h3,
+        body.light-theme .modal-body h4,
+        body.light-theme .modal-body h5,
+        body.light-theme .modal-body h6,
+        body.light-theme .modal-body span {
+        color: #212529 !important;
+        }
+
+        body.light-theme .modal-body .form-control,
+        body.light-theme .modal-body .form-select {
+        background-color: #ffffff !important;
+        color: #212529 !important;
+        border: 1px solid #ced4da !important;
+        }
+
+        body.light-theme .modal-body .form-control:focus,
+        body.light-theme .modal-body .form-select:focus {
+        background-color: #ffffff !important;
+        color: #212529 !important;
+        }
+
+        body.light-theme .modal-body .form-select option {
+        background-color: #ffffff !important;
+        color: #212529 !important;
+        }
+
+        body.light-theme .modal-body .btn-close {
+            filter: none !important;
+        }
+
+        body.dark-theme .modal-content,
+        body.dark-theme .custom-modal,
+        body.dark-theme .modal-body,
+        body.dark-theme .modal-header,
+        body.dark-theme .modal-footer {
+            background-color: #1f2a36 !important;
+            color: #ffffff !important;
+            border-color: #3b4757 !important;
+        }
+
+        body.dark-theme .modal-title,
+        body.dark-theme .modal-body,
+        body.dark-theme .modal-body label,
+        body.dark-theme .modal-body p,
+        body.dark-theme .modal-body h1,
+        body.dark-theme .modal-body h2,
+        body.dark-theme .modal-body h3,
+        body.dark-theme .modal-body h4,
+        body.dark-theme .modal-body h5,
+        body.dark-theme .modal-body h6,
+        body.dark-theme .modal-body span {
+            color: #ffffff !important;
+        }
+
+        body.dark-theme .modal-body .form-control,
+        body.dark-theme .modal-body .form-select {
+            background-color: #2b3644 !important;
+            color: #ffffff !important;
+            border: 1px solid #3b4757 !important;
+        }
+
+        body.dark-theme .modal-body .form-control:focus,
+        body.dark-theme .modal-body .form-select:focus {
+            background-color: #2b3644 !important;
+            color: #ffffff !important;
+        }
+
+        body.dark-theme .modal-body .form-select option {
+            background-color: #2b3644 !important;
+            color: #ffffff !important;
+        }
+
+        body.dark-theme .modal-body .btn-close {
+            filter: invert(1) grayscale(100%) brightness(200%) !important;
+        }
+
+        body.light-theme .modal-body .btn-secondary {
+            background-color: #6c757d !important;
+            color: white !important;
+        }
+
+        body.dark-theme .modal-body .btn-secondary {
+            background-color: #3a4656 !important;
+            color: white !important;
+        }
+
+        body.light-theme .modal-body .btn-primary {
+            background-color: #4c8dff !important;
+            color: white !important;
+        }
+
+        body.dark-theme .modal-body .btn-primary {
+            background-color: #4c8dff !important;
+            color: white !important;
+        }
+
+        body.light-theme .validation-message,
+        body.light-theme .text-danger {
+            color: #dc3545 !important;
+        }
+
+        body.dark-theme .validation-message,
+        body.dark-theme .text-danger {
+            color: #ff6b6b !important;
+        }
+
+        body.light-theme .input-group-text {
+            background-color: #e9ecef !important;
+            color: #495057 !important;
+            border-color: #ced4da !important;
+        }
+
+        body.light-theme .input-group-text i,
+        body.light-theme .input-group-text .bi {
+            color: #495057 !important;
+        }
+
+        body.dark-theme .input-group-text {
+            background-color: #2b3644 !important;
+            color: #ffffff !important;
+            border-color: #3b4757 !important;
+        }
+
+        body.dark-theme .input-group-text i,
+        body.dark-theme .input-group-text .bi {
+            color: #ffffff !important;
+        }
+
+        body.light-theme .card {
+            background-color: #ffffff !important;
+            color: #212529 !important;
+        }
+
+        body.light-theme .form-control {
+            background-color: #ffffff !important;
+            color: #212529 !important;
+            border-color: #ced4da !important;
+        }
+
+        body.light-theme .form-check-label {
+            color: #212529 !important;
+        }
+
+        body.light-theme .text-muted {
+            color: #6c757d !important;
+        }
+
+        body.dark-theme .card {
+            background-color: #2d2d2d !important;
+            color: #f8f9fa !important;
+            border-color: #495057 !important;
+        }
+
+        body.dark-theme .card-header.bg-primary {
+            background-color: #0d6efd !important;
+        }
+
+        body.dark-theme .form-control {
+            background-color: #2b3644 !important;
+            color: #ffffff !important;
+            border-color: #3b4757 !important;
+        }
+
+        body.dark-theme .form-control::placeholder {
+            color: #aab4bf !important;
+        }
+
+        body.dark-theme .form-check-label {
+            color: #f8f9fa !important;
+        }
+
+        body.dark-theme .text-muted {
+            color: #adb5bd !important;
+        }
+
+        body.dark-theme .text-decoration-none {
+            color: #8bb9fe !important;
+        }
+
+        body.light-theme .theme-aware-text {
+            color: #212529 !important;
+        }
+
+        body.dark-theme .theme-aware-text {
+            color: #f8f9fa !important;
+        }
+
+        body.light-theme .theme-aware-muted {
+            color: #6c757d !important;
+        }
+
+        body.dark-theme .theme-aware-muted {
+            color: #adb5bd !important;
+        }
+
+        body.light-theme .theme-aware-link {
+            color: #0d6efd !important;
+        }
+
+        body.dark-theme .theme-aware-link {
+            color: #8bb9fe !important;
+        }
+
+        body.light-theme .theme-aware-card {
+            background-color: #ffffff !important;
+            color: #212529 !important;
+        }
+
+        body.dark-theme .theme-aware-card {
+            background-color: #2d2d2d !important;
+            color: #f8f9fa !important;
+            border-color: #495057 !important;
+        }
+    </style>
+</head>
+<body class="@((HttpContextAccessor.HttpContext?.Request.Cookies["theme"] ?? "light-theme"))">
+
+    <nav class="navbar navbar-expand-lg mb-4">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="/" class="navbar-brand">
+                Система регистрации пропусков
+            </a>
+
+            <div class="d-flex align-items-center gap-2 flex-wrap">
+                @{
+                    var userId = HttpContextAccessor.HttpContext?.Session.GetInt32("UserId");
+                    var userEmail = HttpContextAccessor.HttpContext?.Session.GetString("UserEmail");
+                    var userRole = HttpContextAccessor.HttpContext?.Session.GetString("UserRole");
+                    var userFullName = HttpContextAccessor.HttpContext?.Session.GetString("UserFullName");
+                }
+
+                @if (userId.HasValue)
+                {
+                    <span class="navbar-text me-2">
+                        <i class="bi bi-person-circle"></i> @(userFullName ?? userEmail)
+                    </span>
+                    
+                    @if (userRole == "Admin")
+                    {
+                        <a asp-controller="Admin" asp-action="Dashboard" class="btn btn-outline-primary">
+                            Админ
+                        </a>
+                    }
+                    
+                    @if (userRole == "KPP" || userRole == "Admin")
+                    {
+                        <a asp-controller="Checkpoint" asp-action="Index" class="btn btn-outline-primary">
+                            <i class="bi bi-building"></i> КПП
+                        </a>
+                    }
+                    
+                    <a asp-controller="Account" asp-action="Profile" class="btn btn-outline-primary">
+                        Профиль
+                    </a>
+                    
+                    <form asp-controller="Auth" asp-action="Logout" method="post" class="d-inline">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-outline-secondary">
+                            Выход
+                        </button>
+                    </form>
+                }
+                else
+                {
+                    <a asp-controller="Auth" asp-action="Login" class="btn btn-outline-primary">
+                        Вход
+                    </a>
+                    <a asp-controller="Auth" asp-action="Register" class="btn btn-outline-primary">
+                        Регистрация
+                    </a>
+                }
+
+                <a href="https://t.me/godovih87"
+                   target="_blank"
+                   class="btn btn-outline-primary d-flex align-items-center gap-2">
+                    <i class="bi bi-telegram"></i>
+                    <span class="d-none d-lg-inline">Администратор</span>
+                </a>
+
+                <button class="btn btn-secondary btn-sm" id="btnTheme">
+                    Тема
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        @if (Context.Request.Path != "/" && 
+             !Context.Request.Path.Value.Contains("/Index") && 
+             !Context.Request.Path.Value.Contains("/Login") && 
+             !Context.Request.Path.Value.Contains("/Register") && 
+             !Context.Request.Path.Value.Contains("/Auth"))
+        {
+            <div class="back-button">
+                <a href="javascript:history.back()" class="btn btn-outline-secondary btn-sm">
+                    <i class="bi bi-arrow-left"></i> Назад
+                </a>
+            </div>
+        }
+        
+        @RenderBody()
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const themeButton = document.getElementById('btnTheme');
+
+        let currentTheme = getCookie('theme') || 'light-theme';
+        document.body.classList.remove('light-theme', 'dark-theme');
+        document.body.classList.add(currentTheme);
+        updateThemeButton();
+
+        themeButton.onclick = () => {
+            currentTheme = currentTheme === 'light-theme' ? 'dark-theme' : 'light-theme';
+            document.body.classList.remove('light-theme', 'dark-theme');
+            document.body.classList.add(currentTheme);
+            setCookie('theme', currentTheme, 365);
+            updateThemeButton();
+        };
+
+        function updateThemeButton() {
+            if (currentTheme === 'light-theme') {
+                themeButton.classList.remove('btn-dark');
+                themeButton.classList.add('btn-secondary');
+                themeButton.textContent = 'Тема: Светлая';
+            } else {
+                themeButton.classList.remove('btn-secondary');
+                themeButton.classList.add('btn-dark');
+                themeButton.textContent = 'Тема: Тёмная';
+            }
+        }
+
+        function setCookie(name, value, days) {
+            const d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = name + "=" + value + ";path=/;expires=" + d.toUTCString();
+        }
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+            return null;
+        }
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

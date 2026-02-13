@@ -1,0 +1,83 @@
+﻿@model ExhibitionEntrySystem.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Вход в систему";
+    var returnUrl = Context.Request.Query["returnUrl"];
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow theme-aware-card">
+                <div class="card-header bg-primary text-white text-center py-3">
+                    <i class="bi bi-box-arrow-in-right fs-1"></i>
+                    <h4 class="mb-0 mt-2">Вход в систему</h4>
+                </div>
+                <div class="card-body p-4">
+                    @if (TempData["Success"] != null)
+                    {
+                        <div class="alert alert-success alert-dismissible fade show">
+                            <i class="bi bi-check-circle"></i> @TempData["Success"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    }
+
+                    <form asp-action="Login" method="post">
+                        @Html.AntiForgeryToken()
+
+                        @if (!string.IsNullOrEmpty(returnUrl))
+                        {
+                            <input type="hidden" name="returnUrl" value="@returnUrl" />
+                        }
+
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+                        <div class="mb-4">
+                            <label asp-for="Email" class="form-label fw-bold theme-aware-text"></label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-envelope"></i>
+                                </span>
+                                <input asp-for="Email" class="form-control" placeholder="email@example.com" />
+                            </div>
+                            <span asp-validation-for="Email" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="Password" class="form-label fw-bold theme-aware-text"></label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-key"></i>
+                                </span>
+                                <input asp-for="Password" class="form-control" />
+                            </div>
+                            <span asp-validation-for="Password" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-4 form-check">
+                            <input asp-for="RememberMe" class="form-check-input" />
+                            <label asp-for="RememberMe" class="form-check-label theme-aware-text"></label>
+                        </div>
+
+                        <div class="d-grid gap-3">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="bi bi-box-arrow-in-right"></i> Войти
+                            </button>
+
+                            <div class="text-center">
+                                <span class="text-muted theme-aware-muted">Нет аккаунта?</span>
+                                <a asp-action="Register" asp-route-returnUrl="@returnUrl" class="text-decoration-none theme-aware-link">
+                                    Зарегистрироваться
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

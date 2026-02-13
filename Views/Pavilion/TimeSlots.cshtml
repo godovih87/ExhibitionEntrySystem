@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "Выбор времени";
+    var isAuthenticated = Context.Session.GetInt32("UserId") != null;
+}
+
+@if (!isAuthenticated)
+{
+    <div style="position: fixed; top: 80px; left: 0; width: 100%; height: calc(100% - 80px); background-color: rgba(0,0,0,0.7); z-index: 9998; display: flex; justify-content: center; align-items: center; backdrop-filter: blur(3px);">
+        <div class="theme-aware-modal" style="border-radius: 15px; padding: 40px; max-width: 450px; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.2); z-index: 9999;">
+            <i class="bi bi-shield-lock" style="font-size: 4rem; color: #dc3545;"></i>
+            <h3 class="mt-3 mb-3 theme-aware-text">Требуется авторизация</h3>
+            <p class="theme-aware-muted mb-4">Для бронирования пропусков необходимо войти в систему или зарегистрироваться</p>
+            <div class="d-grid gap-3">
+                <a href="@Url.Action("Login", "Auth", new { returnUrl = Context.Request.Path })" class="btn btn-primary btn-lg">
+                    <i class="bi bi-box-arrow-in-right"></i> Войти
+                </a>
+                <a href="@Url.Action("Register", "Auth")" class="btn btn-outline-secondary btn-lg">
+                    <i class="bi bi-person-plus"></i> Регистрация
+                </a>
+            </div>
+        </div>
+    </div>
+}
+
+<h2 class="text-center mb-4 theme-aware-text">@ViewBag.PavilionName</h2>
+
+<div class="row">
+    @foreach (var hour in ViewBag.Hours)
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card text-center theme-aware-card">
+                <div class="card-body">
+                    <h5 class="theme-aware-text">@hour.Hour:00 – @(hour.Hour + 1):00</h5>
+                    <p class="theme-aware-text">Свободно мест: <span class="theme-aware-text">@hour.Available</span></p>
+
+                    @if (hour.Available > 0)
+                    {
+                        <a class="btn btn-success" 
+                           href="@Url.Action("BookForm", "Booking",
+                                new { pavilionId = ViewBag.PavilionId,
+                                      startTime = hour.StartTime.ToString("yyyy-MM-ddTHH:mm") })">
+                            Выбрать
+                        </a>
+                    }
+                    else
+                    {
+                        <button class="btn btn-danger" disabled>Занято</button>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    body.light-theme .theme-aware-card {
+        background-color: white;
+        color: #212529;
+        border-color: #dee2e6;
+    }
+    body.light-theme .theme-aware-text {
+        color: #212529;
+    }
+    body.light-theme .theme-aware-muted {
+        color: #6c757d;
+    }
+    body.light-theme .theme-aware-modal {
+        background-color: white;
+        color: #212529;
+    }
+    
+    body.dark-theme .theme-aware-card {
+        background-color: #2d2d2d;
+        color: #f8f9fa;
+        border-color: #495057;
+    }
+    body.dark-theme .theme-aware-text {
+        color: #f8f9fa;
+    }
+    body.dark-theme .theme-aware-muted {
+        color: #adb5bd;
+    }
+    body.dark-theme .theme-aware-modal {
+        background-color: #2d2d2d;
+        color: #f8f9fa;
+    }
+</style>

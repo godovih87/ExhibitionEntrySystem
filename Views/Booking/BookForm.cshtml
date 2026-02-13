@@ -1,0 +1,66 @@
+﻿@model ExhibitionEntrySystem.Models.Booking
+
+@{
+    ViewData["Title"] = "Бронирование";
+    var timeRange = $"{Model.StartTime:HH:mm} - {Model.EndTime:HH:mm}";
+}
+
+<div class="container py-4">
+    <div class="card mx-auto" style="max-width: 500px;">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">@ViewBag.PavilionName — @timeRange</h4>
+        </div>
+
+        <div class="card-body">
+            <form asp-action="BookForm" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="pavilionId" value="@ViewBag.PavilionId" />
+                <input type="hidden" asp-for="StartTime" />
+                <input type="hidden" asp-for="EndTime" />
+
+                <div class="mb-3">
+                    <label class="form-label">Организация *</label>
+                    <input asp-for="OrganizationName" class="form-control" />
+                    <span asp-validation-for="OrganizationName" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Контактное лицо *</label>
+                    <input asp-for="ContactPerson" class="form-control" />
+                    <span asp-validation-for="ContactPerson" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Телефон *</label>
+                    <input asp-for="PhoneNumber" class="form-control" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Тип транспорта *</label>
+                    <select asp-for="VehicleType" class="form-select">
+                        <option value="">-- Выберите --</option>
+                        <option>Легковой</option>
+                        <option>Грузовой(5Т)</option>
+                        <option>Фура(10Т+)</option>
+                    </select>
+                    <span asp-validation-for="VehicleType" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Гос. номер *</label>
+                    <input asp-for="LicensePlate" class="form-control" placeholder="а111аа96" />
+                    <span asp-validation-for="LicensePlate" class="text-danger"></span>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-success">Подтвердить и получить QR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

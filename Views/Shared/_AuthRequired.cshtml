@@ -1,0 +1,68 @@
+﻿@{
+    var returnUrl = Context.Request.Path + Context.Request.QueryString;
+}
+
+<div class="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center"
+     style="background-color: rgba(0,0,0,0.7); z-index: 9999;">
+    <div class="card shadow-lg border-0 theme-aware-card" style="max-width: 400px; animation: slideIn 0.3s ease;">
+        <div class="card-body text-center p-5">
+            <div class="mb-4">
+                <i class="bi bi-shield-lock" style="font-size: 4rem; color: #dc3545;"></i>
+            </div>
+            <h3 class="mb-3 theme-aware-text">Требуется авторизация</h3>
+            <p class="theme-aware-muted mb-4">
+                Для бронирования пропусков необходимо войти в систему или зарегистрироваться
+            </p>
+            <div class="d-grid gap-3">
+                <a href="@Url.Action("Login", "Auth", new { returnUrl = returnUrl })"
+                   class="btn btn-primary btn-lg">
+                    <i class="bi bi-box-arrow-in-right"></i> Войти
+                </a>
+                <a href="@Url.Action("Register", "Auth")"
+                   class="btn btn-outline-secondary btn-lg">
+                    <i class="bi bi-person-plus"></i> Регистрация
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    @@keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    body.light-theme .theme-aware-card {
+        background-color: white;
+        color: #212529;
+    }
+
+    body.light-theme .theme-aware-text {
+        color: #212529;
+    }
+
+    body.light-theme .theme-aware-muted {
+        color: #6c757d;
+    }
+
+    body.dark-theme .theme-aware-card {
+        background-color: #2d2d2d;
+        color: #f8f9fa;
+    }
+
+    body.dark-theme .theme-aware-text {
+        color: #f8f9fa;
+    }
+
+    body.dark-theme .theme-aware-muted {
+        color: #adb5bd;
+    }
+</style>

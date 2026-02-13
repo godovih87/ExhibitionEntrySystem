@@ -1,0 +1,352 @@
+﻿@model ExhibitionEntrySystem.Models.Pass
+
+<style>
+    .custom-modal {
+        background-color: #ffffff;
+        color: #212529;
+        border-radius: 10px;
+    }
+
+        .custom-modal .modal-header,
+        .custom-modal .modal-footer {
+            border-color: #dee2e6;
+        }
+
+        .custom-modal .modal-title {
+            color: #212529;
+        }
+
+        .custom-modal .btn-close {
+            filter: none;
+        }
+
+        .custom-modal .form-label {
+            color: #495057;
+            font-weight: 500;
+        }
+
+        .custom-modal .form-control,
+        .custom-modal .form-select {
+            background-color: #ffffff !important;
+            color: #212529 !important;
+            border: 1px solid #ced4da;
+        }
+
+            .custom-modal .form-control:focus,
+            .custom-modal .form-select:focus {
+                background-color: #ffffff !important;
+                color: #212529 !important;
+                border-color: #4c8dff;
+                box-shadow: 0 0 0 0.15rem rgba(76, 141, 255, 0.25);
+            }
+
+            .custom-modal .form-control::placeholder {
+                color: #adb5bd;
+            }
+
+            .custom-modal .form-select option {
+                background-color: #ffffff;
+                color: #212529;
+            }
+
+        .custom-modal .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+            color: white;
+        }
+
+            .custom-modal .btn-secondary:hover {
+                background-color: #5a6268;
+                border-color: #545b62;
+            }
+
+        .custom-modal .btn-primary {
+            background-color: #4c8dff;
+            border-color: #4c8dff;
+            color: white;
+        }
+
+            .custom-modal .btn-primary:hover {
+                background-color: #3b78e0;
+                border-color: #3b78e0;
+            }
+
+        .custom-modal .text-danger {
+            color: #dc3545 !important;
+        }
+
+    .validation-message {
+        color: #dc3545;
+        font-size: 0.85rem;
+        margin-top: 5px;
+    }
+    body.dark-theme .custom-modal {
+        background-color: #1f2a36;
+        color: #ffffff;
+    }
+
+        body.dark-theme .custom-modal .modal-header,
+        body.dark-theme .custom-modal .modal-footer {
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        body.dark-theme .custom-modal .modal-title {
+            color: #ffffff;
+        }
+
+        body.dark-theme .custom-modal .btn-close {
+            filter: invert(1) grayscale(100%) brightness(200%);
+        }
+
+        body.dark-theme .custom-modal .form-label {
+            color: #e4e9ee;
+        }
+
+        body.dark-theme .custom-modal .form-control,
+        body.dark-theme .custom-modal .form-select {
+            background-color: #2b3644 !important;
+            color: #ffffff !important;
+            border: 1px solid #3b4757;
+        }
+
+            body.dark-theme .custom-modal .form-control:focus,
+            body.dark-theme .custom-modal .form-select:focus {
+                background-color: #2b3644 !important;
+                color: #ffffff !important;
+                border-color: #4c8dff;
+                box-shadow: 0 0 0 0.15rem rgba(76, 141, 255, 0.25);
+            }
+
+            body.dark-theme .custom-modal .form-control::placeholder {
+                color: #aab4bf;
+            }
+
+            body.dark-theme .custom-modal .form-select option {
+                background-color: #2b3644;
+                color: #ffffff;
+            }
+
+        body.dark-theme .custom-modal .btn-secondary {
+            background-color: #3a4656;
+            border-color: #3a4656;
+            color: #ffffff;
+        }
+
+            body.dark-theme .custom-modal .btn-secondary:hover {
+                background-color: #4a5666;
+                border-color: #4a5666;
+            }
+
+        body.dark-theme .custom-modal .btn-primary {
+            background-color: #4c8dff;
+            border-color: #4c8dff;
+            color: #ffffff;
+        }
+
+            body.dark-theme .custom-modal .btn-primary:hover {
+                background-color: #3b78e0;
+                border-color: #3b78e0;
+            }
+
+        body.dark-theme .custom-modal .text-danger {
+            color: #ff6b6b !important;
+        }
+
+    body.dark-theme .validation-message {
+        color: #ff6b6b;
+    }
+
+    body.light-theme .table {
+        background-color: #ffffff;
+        color: #212529;
+    }
+
+    body.light-theme .table-striped > tbody > tr:nth-of-type(odd) {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    body.dark-theme .table {
+        background-color: #2d2d2d;
+        color: #f8f9fa;
+    }
+
+    body.dark-theme .table-striped > tbody > tr:nth-of-type(odd) {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    body.dark-theme .table td,
+    body.dark-theme .table th {
+        border-color: #495057;
+    }
+</style>
+
+<div class="modal fade" id="editPassModal-@Model.Id" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content custom-modal">
+            <form asp-action="EditPass" method="post" onsubmit="return validateTime_@(Model.Id)()">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="Id" value="@Model.Id" />
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Редактирование пропуска №@Model.Id</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Организация *</label>
+                        <input name="Visitor.OrganizationName"
+                               value="@Model.Visitor?.OrganizationName"
+                               class="form-control"
+                               placeholder="Название организации" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Контактное лицо *</label>
+                        <input name="Visitor.ContactPerson"
+                               value="@Model.Visitor?.ContactPerson"
+                               class="form-control"
+                               placeholder="ФИО контактного лица" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Телефон *</label>
+                        <input name="Visitor.PhoneNumber"
+                               value="@Model.Visitor?.PhoneNumber"
+                               class="form-control"
+                               placeholder="+7 (999) 123-45-67" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Тип транспорта *</label>
+                        <select name="Vehicle.VehicleType" class="form-select">
+                            <option value="">-- Выберите --</option>
+                            <option value="Легковой" selected="@(Model.Vehicle?.VehicleType == "Легковой")">Легковой</option>
+                            <option value="Грузовой(5Т)" selected="@(Model.Vehicle?.VehicleType == "Грузовой(5Т)")">Грузовой (5Т)</option>
+                            <option value="Фура(10Т+)" selected="@(Model.Vehicle?.VehicleType == "Фура(10Т+)")">Фура (10Т+)</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Гос. номер *</label>
+                        <input name="Vehicle.LicensePlate"
+                               value="@Model.Vehicle?.LicensePlate"
+                               class="form-control"
+                               placeholder="а111аа96" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Время начала *</label>
+                        <input type="datetime-local"
+                               name="StartTime"
+                               id="startTime_@Model.Id"
+                               value="@Model.StartTime.ToString("yyyy-MM-ddTHH:mm")"
+                               class="form-control" />
+                        <div id="startTimeError_@Model.Id" class="validation-message"></div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Время окончания *</label>
+                        <input type="datetime-local"
+                               name="EndTime"
+                               id="endTime_@Model.Id"
+                               value="@Model.EndTime.ToString("yyyy-MM-ddTHH:mm")"
+                               class="form-control" />
+                        <div id="endTimeError_@Model.Id" class="validation-message"></div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Статус *</label>
+                        <select name="Status" class="form-select">
+                            <option value="Сформирован" selected="@(Model.Status == "Сформирован")">Сформирован</option>
+                            <option value="Въехал" selected="@(Model.Status == "Въехал")">Въехал</option>
+                            <option value="Выехал" selected="@(Model.Status == "Выехал")">Выехал</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function validateTime_@(Model.Id)() {
+        var startTime = document.getElementById('startTime_@Model.Id').value;
+        var endTime = document.getElementById('endTime_@Model.Id').value;
+        var originalStart = '@Model.StartTime.ToString("yyyy-MM-ddTHH:mm")';
+        var originalEnd = '@Model.EndTime.ToString("yyyy-MM-ddTHH:mm")';
+
+        document.getElementById('startTimeError_@Model.Id').innerHTML = '';
+        document.getElementById('endTimeError_@Model.Id').innerHTML = '';
+
+        if (startTime === originalStart && endTime === originalEnd) {
+            return true;
+        }
+
+        var now = new Date();
+        var start = new Date(startTime);
+        var end = new Date(endTime);
+
+        if (!startTime || !endTime) {
+            alert('❌ Заполните время начала и окончания');
+            return false;
+        }
+
+        var today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        if (start < today) {
+            document.getElementById('startTimeError_@Model.Id').innerHTML = '❌ Нельзя установить дату в прошлом';
+            return false;
+        }
+
+        if (start.toDateString() === now.toDateString() && start < now) {
+            document.getElementById('startTimeError_@Model.Id').innerHTML = '❌ Нельзя установить время, которое уже прошло';
+            return false;
+        }
+
+        if (end <= start) {
+            document.getElementById('endTimeError_@Model.Id').innerHTML = '❌ Время окончания должно быть позже времени начала';
+            return false;
+        }
+
+        var diffMs = end - start;
+        var diffMinutes = diffMs / (1000 * 60);
+
+        if (diffMinutes < 30) {
+            document.getElementById('endTimeError_@Model.Id').innerHTML = '❌ Минимальная длительность пропуска - 30 минут';
+            return false;
+        }
+
+        var diffHours = diffMs / (1000 * 60 * 60);
+
+        if (diffHours > 8) {
+            document.getElementById('endTimeError_@Model.Id').innerHTML = '❌ Максимальная длительность пропуска - 8 часов';
+            return false;
+        }
+
+        return true;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var startInput = document.getElementById('startTime_@Model.Id');
+        var endInput = document.getElementById('endTime_@Model.Id');
+
+        if (startInput) {
+            startInput.addEventListener('change', function() {
+                validateTime_@(Model.Id)();
+            });
+        }
+
+        if (endInput) {
+            endInput.addEventListener('change', function() {
+                validateTime_@(Model.Id)();
+            });
+        }
+    });
+</script>

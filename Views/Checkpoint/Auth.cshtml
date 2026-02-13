@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Авторизация КПП";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow">
+                <div class="card-header bg-warning text-dark">
+                    <h4 class="mb-0"><i class="bi bi-shield-lock"></i> Авторизация сотрудника КПП</h4>
+                </div>
+                <div class="card-body p-4">
+                    @if (ViewBag.Error != null)
+                    {
+                        <div class="alert alert-danger">
+                            <i class="bi bi-exclamation-triangle"></i> @ViewBag.Error
+                        </div>
+                    }
+
+                    <form method="post" asp-action="Auth">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="key" value="@ViewBag.Key" />
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                <input type="email" name="email" class="form-control"
+                                       placeholder="email@expo.ru" required autofocus />
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Пароль</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-key"></i></span>
+                                <input type="password" name="password" class="form-control"
+                                       placeholder="Пароль" required />
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-warning btn-lg w-100 text-dark">
+                            <i class="bi bi-box-arrow-in-right"></i> Войти и проверить пропуск
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
